@@ -5,7 +5,7 @@ package offer;
  * 思路：遍历两个链表得到它们的长度a和b，长度差为h，长链表先走h个距离，然后比较pHead1 == pHead2，如果不等，两个链表
  * 各走一步接着比较，一直到相同为止，否则返回null。
  */
-public class FindFirstCommonNode{
+public class o52_FindFirstCommonNode {
     public ListNode findFirstCommonNode(ListNode pHead1, ListNode pHead2) {
         if(pHead1==null || pHead2==null)
             return null;

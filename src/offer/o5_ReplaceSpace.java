@@ -16,7 +16,7 @@ import java.util.Scanner;
  * ③：下面是别人的方法，我还是想太多了，因为我的方法一直没通过，全用char型比较好。
  */
 
-public class ReplaceSpace {
+public class o5_ReplaceSpace {
     public static String replaceSpace(StringBuffer str) {
         if(str == null)
             return null;

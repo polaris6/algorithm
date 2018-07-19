@@ -7,7 +7,7 @@ package offer;
 import java.util.ArrayList;
 import java.util.Stack;
 
-public class PrintListFromTailToHead {
+public class o6_PrintListFromTailToHead {
     public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
         Stack<Integer> stack = new Stack<>();
         while(listNode != null) {

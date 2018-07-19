@@ -7,7 +7,7 @@ package offer;
  * 思路：首先选取数组中右上角的数字。如果该数字等于要查找的数字，则查找过程结束；如果该数字大于要查找的数字，则删除这个
  * 数字所在的列；如果该数字小于要查找的数字，则删除这个数字所在的行。
  */
-public class Find {
+public class o4_Find {
     public boolean find(int target,int[][] array){
         int row = array.length;
         int column = array[0].length;

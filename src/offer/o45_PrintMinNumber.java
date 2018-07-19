@@ -9,7 +9,7 @@ import java.util.Scanner;
  * 例如输入数组{3，32，321}，则打印出这三个数字能排成的最小数字为321323。
  */
 
-/*
+/**
 我没想出来好的方法，渣渣
 下面是别人的方法:
  * 解题思路：
@@ -21,7 +21,7 @@ import java.util.Scanner;
  * 解释说明：
  * 比如 "3" < "31"但是 "331" > "313"，所以要将二者拼接起来进行比较
  */
-public class PrintMinNumber {
+public class o45_PrintMinNumber {
     public static String printMinNumber(int [] numbers) {
         int len = numbers.length;
         String[] str = new String[len];

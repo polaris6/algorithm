@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * 题目描述：从上往下打印出二叉树的每个节点，同层节点从左至右打印。
  * 思路：先进先出，所以引入一个队列。
  */
-public class PrintFromTopToBottom {
+public class o32_PrintFromTopToBottom {
     public ArrayList<Integer> printFromTopToBottom(TreeNode root) {
         if(root == null)
             return new ArrayList<>();

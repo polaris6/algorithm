@@ -10,7 +10,7 @@ package offer;
  * offer思路：用二分查找的思想，给两个指针，一个指向头一个指向尾。先判断中间元素，如果中间元素位于前面的递增子数组，那么
  * 它应该大于等于头位置，此时把第一个指针指向中间位置......
  */
-public class MinNumberInRotateArray {
+public class o11_MinNumberInRotateArray {
     public int minNumberInRotateArray(int[] array) {
         int low = 0;
         int high = array.length-1;

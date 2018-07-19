@@ -8,7 +8,7 @@ package offer;
 
 import java.util.TreeSet;
 
-public class FindNumsAppearOnce {
+public class o56_FindNumsAppearOnce {
     public static void findNumsAppearOnce(int[] array,int[] num1,int[] num2){
         int max = 0;
         for(int i:array){

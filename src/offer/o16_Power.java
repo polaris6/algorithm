@@ -6,7 +6,7 @@ package offer;
 
 import java.util.Scanner;
 
-public class Power {
+public class o16_Power {
     public static double Power(double base, int exponent){
         return Math.pow(base,exponent);
     }

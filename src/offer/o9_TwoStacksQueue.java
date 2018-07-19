@@ -5,7 +5,7 @@ package offer;
 
 import java.util.Stack;
 
-public class TwoStacksQueue {
+public class o9_TwoStacksQueue {
     Stack<Integer> stack1 = new Stack<Integer>();
     Stack<Integer> stack2 = new Stack<Integer>();
 

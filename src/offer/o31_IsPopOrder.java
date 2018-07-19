@@ -25,7 +25,7 @@ import java.util.Stack;
  * 依次执行，最后辅助栈为空。如果不为空说明弹出序列不是该栈的弹出顺序。
  */
 
-public class IsPopOrder {
+public class o31_IsPopOrder {
     public boolean isPopOrder(int [] pushA,int [] popA) {
         if(pushA.length==0 || popA.length==0)
             return false;
