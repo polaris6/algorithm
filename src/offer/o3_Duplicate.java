@@ -9,7 +9,7 @@ package offer;
  * duplication[0]为返回值
  * boolean用于判断输入是否合法，以及是否有重复值
  */
-public class o3_duplicate {
+public class o3_Duplicate {
     public boolean duplicate(int numbers[],int length,int [] duplication) {
         boolean flag = false;
         if(numbers == null)
