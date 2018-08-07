@@ -3,7 +3,7 @@ package leetcode;
 import java.util.HashMap;
 
 /**
- * 题目描述：
+ * 题目描述：无重复字符的最长子串
  * 给一个字符串，返回它的不包含重复字符的最长子串的长度，假设字符串只包含'a'-'z'的字符
  * 例如："arabcacfr"，最长子串是'rabc'和'acfr'，长度为4
  *
@@ -13,7 +13,7 @@ import java.util.HashMap;
  * 1、HashMap中的这个重复字符出现在head到i的子串之前，此时不用管
  * 2、HashMap中的这个重复字符出现在head到i的子串中，此时让重复字符的后一个位置成为头指针head
  */
-public class LengthOfLongestSubstring {
+public class o3_LengthOfLongestSubstring {
     public int lengthOfLongestSubstring(String s){
         if(s.length()==0)
             return 0;
