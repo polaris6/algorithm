@@ -15,7 +15,7 @@ public class o10_2_JumpFloor {
         if(target == 0 || target==1)
             sum = 1;
         if(target > 1)
-            sum += jumpFloor(target-1) + jumpFloor(target-2);
+            sum = jumpFloor(target-1) + jumpFloor(target-2);
         return sum;
     }
 
