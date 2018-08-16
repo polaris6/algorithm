@@ -1,14 +1,7 @@
 package sort;
 
-import java.util.Arrays;
-
 public class HeapSort {
-    public static void main(String[] args) {
-        int []arr = {51, 46, 20, 18, 65, 97, 0, 82, 30, 77, 50};
-        heapSort(arr);
-        System.out.println(Arrays.toString(arr));
-    }
-    public static void heapSort(int []arr){
+    public void heapSort(int[] arr){
         //1.构建大顶堆
         for(int i = arr.length/2-1;i>=0;i--)
             //从最后一个非叶子结点从右至左，从下至上调整结构
@@ -20,7 +13,7 @@ public class HeapSort {
         }
     }
     //调整大顶堆
-    public static void adjustHeap(int []arr, int i,int length){
+    public void adjustHeap(int[] arr, int i,int length){
         int temp = arr[i];
         for(int k = 2*i+1;k<length;k = k*2+1){
             if(k+1<length && arr[k]<arr[k+1])
@@ -34,7 +27,7 @@ public class HeapSort {
         arr[i] = temp;
     }
     //交换元素
-    public static void swap(int []arr, int a, int b){
+    public void swap(int[] arr, int a, int b){
         int temp = arr[a];
         arr[a] = arr[b];
         arr[b] = temp;
