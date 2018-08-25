@@ -1,40 +1,39 @@
 package sort;
 
-import java.util.Arrays;
-
 public class Sort {
-    public static void main(String[] args) {
-        int[] arr = {1,2,3,0};
-        heapSort(arr);
-        System.out.println(Arrays.toString(arr));
-    }
-    public static void heapSort(int[] arr){
-        //1.构建大顶堆
-        for(int i = arr.length/2-1;i>=0;i--)
-            //从最后一个非叶子结点从右至左，从下至上调整结构
-            adjustHeap(arr,i,arr.length);
-        //2.将根节点元素和末尾元素互换，调整堆结构
-        for(int j = arr.length-1;j>0;j--){
-            swap(arr, 0, j);        //将堆顶元素与末尾元素进行交换
-            adjustHeap(arr, 0, j);   //重新对堆进行调整
+    public void quickSort(int[] arr, int left, int right){
+        if(left < right){
+            dealPivot(arr, left, right);
+            int i = left;
+            int j = right - 1;
+            int pivot = right - 1;
+            while(true) {
+                while (arr[++i] < arr[pivot]) {
+                }
+                while (j > left && arr[--j] > arr[pivot]) {
+                }
+                if (i < j)
+                    swap(arr, i, j);
+                else
+                    break;
+            }
+            if(i < right)
+                swap(arr, i, pivot);
+            quickSort(arr, left, i-1);
+            quickSort(arr, i+1,right);
         }
     }
-    //调整大顶堆
-    public static void adjustHeap(int[] arr, int i,int length){
-        int temp = arr[i];
-        for(int k = 2*i+1;k<length;k = k*2+1){
-            if(k+1<length && arr[k]<arr[k+1])
-                k++;
-            if(temp < arr[k]){
-                arr[i] = arr[k];
-                i = k;
-            }else
-                break;
-        }
-        arr[i] = temp;
+    public void dealPivot(int[] arr, int left, int right){
+        int mid = (left + right)/2;
+        if(arr[left] > arr[mid])
+            swap(arr, left, mid);
+        if(arr[left] > arr[right])
+            swap(arr, left, right);
+        if(arr[mid] > arr[right])
+            swap(arr, mid, right);
+        swap(arr, mid, right-1);
     }
-    //交换元素
-    public static void swap(int[] arr, int a, int b){
+    public void swap(int[] arr, int a, int b){
         int temp = arr[a];
         arr[a] = arr[b];
         arr[b] = temp;
