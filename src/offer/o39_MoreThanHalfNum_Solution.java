@@ -12,7 +12,9 @@ package offer;
  * 主元素。再加一次循环，记录这个士兵的个数看是否大于数组一半即可。
  */
 public class o39_MoreThanHalfNum_Solution {
-    public int MoreThanHalfNum_Solution(int [] array) {
+    public int moreThanHalfNum_Solution(int[] array){
+        if(array.length == 0)
+            return 0;
         int count = 1;
         int num = array[0];
         for(int i = 1;i < array.length;i++){
