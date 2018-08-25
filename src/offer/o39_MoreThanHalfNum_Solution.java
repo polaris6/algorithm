@@ -18,14 +18,14 @@ public class o39_MoreThanHalfNum_Solution {
         int count = 1;
         int num = array[0];
         for(int i = 1;i < array.length;i++){
-            if(array[i] == num)
-                count++;
-            else
-                count--;
             if(count == 0){
                 num = array[i];
                 count = 1;
             }
+            else if(array[i] == num)
+                count++;
+            else
+                count--;
         }
         count = 0;
         for(int n : array){
