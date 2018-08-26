@@ -13,6 +13,8 @@ package leetcode;
  */
 public class o64_MinPathSum {
     public int minPathSum(int[][] grid) {
+        if(grid == null || grid[0].length == 0)
+            return 0;
         int row = grid.length;
         int column = grid[0].length;
         for(int i = 0;i < row;i++){

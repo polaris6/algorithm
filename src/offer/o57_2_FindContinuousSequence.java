@@ -15,7 +15,7 @@ import java.util.ArrayList;
  * big分别加1，如果小于2*sum，则big加1，否则small加1
  */
 public class o57_2_FindContinuousSequence {
-    public ArrayList<ArrayList<Integer>> FindContinuousSequence(int sum) {
+    public ArrayList<ArrayList<Integer>> findContinuousSequence(int sum) {
         ArrayList<ArrayList<Integer>> list1 = new ArrayList<>();
         int small = 1;
         int big = 2;

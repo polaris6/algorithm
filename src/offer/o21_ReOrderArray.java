@@ -7,6 +7,8 @@ package offer;
  */
 public class o21_ReOrderArray {
     public void reOrderArray(int[] array) {
+        if(array == null || array.length == 0)
+            return;
         int[] newArr = array.clone();
         int index = 0;
         for(int i = 0;i < newArr.length;i++){

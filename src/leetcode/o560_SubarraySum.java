@@ -13,6 +13,8 @@ import java.util.HashMap;
  */
 public class o560_SubarraySum {
     public int subarraySum(int[] nums, int k) {
+        if(nums == null || nums.length == 0)
+            return 0;
         int sum = 0;
         int count = 0;
         HashMap<Integer, Integer> map = new HashMap<>();

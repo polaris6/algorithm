@@ -10,7 +10,7 @@ package offer;
  */
 public class o63_MaxProfit {
     public int maxProfit(int[] prices) {
-        if(prices.length == 0)
+        if(prices == null || prices.length == 0)
             return 0;
         int maxProfit = 0;
         int minNum = prices[0];

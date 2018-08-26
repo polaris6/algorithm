@@ -9,7 +9,9 @@ package offer;
  * 然后两位置相减即得次数
  */
 public class o53_GetNumberOfK {
-    public int GetNumberOfK(int [] array , int k) {
+    public int getNumberOfK(int[] array, int k) {
+        if(array == null || array.length == 0)
+            return 0;
         return getIndex(array,k+0.5) - getIndex(array, k-0.5);
     }
 

@@ -9,7 +9,9 @@ import java.util.ArrayList;
  * 输出描述：输出两个数，小的先输出。
  */
 public class o57_1_FindNumbersWithSum {
-    public ArrayList<Integer> FindNumbersWithSum(int [] array, int sum) {
+    public ArrayList<Integer> findNumbersWithSum(int[] array, int sum) {
+        if(array == null || array.length == 0)
+            return null;
         int left = 0;
         int right = array.length - 1;
         ArrayList<Integer> output = new ArrayList<>();

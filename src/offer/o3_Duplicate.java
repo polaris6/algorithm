@@ -12,9 +12,9 @@ package offer;
  */
 public class o3_Duplicate {
     public boolean duplicate(int numbers[],int length,int [] duplication) {
+        if(numbers == null || numbers.length == 0)
+            return false;
         boolean flag = false;
-        if(numbers == null)
-            return flag;
         int[] newNumbers = new int[length];
         for(int num : numbers)
             newNumbers[num]++;

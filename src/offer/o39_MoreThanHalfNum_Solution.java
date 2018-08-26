@@ -13,7 +13,7 @@ package offer;
  */
 public class o39_MoreThanHalfNum_Solution {
     public int moreThanHalfNum_Solution(int[] array){
-        if(array.length == 0)
+        if(array == null || array.length == 0)
             return 0;
         int count = 1;
         int num = array[0];

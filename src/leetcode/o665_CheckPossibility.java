@@ -7,6 +7,8 @@ package leetcode;
  */
 public class o665_CheckPossibility {
     public boolean checkPossibility(int[] nums) {
+        if(nums == null || nums.length == 0)
+            return false;
         int numOfIncrease = 0;      //数组后一个数比前一个数小这种情况出现的次数，如果出现不止一次，肯定错
         boolean flag = false;
         for(int i = 1;i < nums.length && numOfIncrease <= 1;i++){

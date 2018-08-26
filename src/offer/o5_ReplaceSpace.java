@@ -1,7 +1,5 @@
 package offer;
 
-import java.util.Scanner;
-
 /**
  * 请实现一个函数，将一个字符串中的空格替换成“%20”。
  * 例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。
@@ -17,9 +15,9 @@ import java.util.Scanner;
  */
 
 public class o5_ReplaceSpace {
-    public static String replaceSpace(StringBuffer str) {
-        if(str == null)
-            return null;
+    public String replaceSpace(StringBuffer str) {
+        if(str == null || str.length() == 0)
+            return "";
         StringBuilder sbu = new StringBuilder();
         for(int i = 0;i<str.length();i++) {
             if (str.charAt(i) == ' '){
@@ -30,12 +28,5 @@ public class o5_ReplaceSpace {
                 sbu.append(str.charAt(i));
         }
         return sbu.toString();
-    }
-
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String s = sc.nextLine();
-        StringBuffer sb = new StringBuffer(s);
-        System.out.println(replaceSpace(sb));
     }
 }

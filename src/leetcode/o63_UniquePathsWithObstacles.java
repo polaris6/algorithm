@@ -11,6 +11,8 @@ package leetcode;
  */
 public class o63_UniquePathsWithObstacles {
     public int uniquePathsWithObstacles(int[][] obstacleGrid) {
+        if(obstacleGrid == null || obstacleGrid.length == 0)
+            return 0;
         int column = obstacleGrid[0].length;     //列数
         int[] dp = new int[column];
         dp[0] = 1;

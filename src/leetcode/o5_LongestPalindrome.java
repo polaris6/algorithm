@@ -9,6 +9,8 @@ public class o5_LongestPalindrome {
     private int start, maxLen;
 
     public String longestPalindrome(String s) {
+        if(s == null || s.length() == 0)
+            return "";
         int len = s.length();
         if(len < 2)
             return s;

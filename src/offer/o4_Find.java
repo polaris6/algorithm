@@ -9,6 +9,8 @@ package offer;
  */
 public class o4_Find {
     public boolean find(int target,int[][] array){
+        if(array == null || array.length == 0)
+            return false;
         int row = array.length;
         int column = array[0].length;
         int i = 0;

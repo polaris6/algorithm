@@ -6,7 +6,7 @@ package offer;
  */
 public class o42_FindGreatestSumOfSubArray {
     public int findGreatestSumOfSubArray(int[] array) {
-        if(array.length == 0)
+        if(array == null || array.length == 0)
             return 0;
         int[] maxSum = new int[array.length];   //maxSum[i]代表以array[i]结尾的子数组的最大和
         maxSum[0] = array[0];

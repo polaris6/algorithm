@@ -9,6 +9,8 @@ import java.util.HashMap;
  */
 public class o50_FirstNotRepeatingChar {
     public int FirstNotRepeatingChar(String str) {
+        if(str == null || str.length() == 0)
+            return -1;
         HashMap<Character, Integer> map = new HashMap<>();
         for(char c : str.toCharArray()){
             if(map.get(c) != null)
