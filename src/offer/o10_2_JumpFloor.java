@@ -9,6 +9,8 @@ package offer;
  */
 public class o10_2_JumpFloor {
     public int jumpFloor(int target) {
+        if(target < 0)
+            return -1;
         int sum = 0;
         if(target == 0 || target==1)
             sum = 1;

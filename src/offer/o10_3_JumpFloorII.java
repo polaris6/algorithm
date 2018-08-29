@@ -7,6 +7,8 @@ package offer;
  */
 public class o10_3_JumpFloorII {
     public int jumpFloorII(int target) {
+        if(target < 0)
+            return -1;
         int sum = 0;
         if(target==0 || target==1)
             sum = 1;
