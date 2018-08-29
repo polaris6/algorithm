@@ -16,7 +16,7 @@ package offer;
  */
 public class o22_FindKthToTail {
     public ListNode FindKthToTail(ListNode head,int k) {
-        if(head == null || k == 0)
+        if(head == null || k <= 0)
             return null;
         ListNode firstIndex = head, secondIndex = head;
         int index = 1;
