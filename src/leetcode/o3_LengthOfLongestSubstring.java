@@ -19,7 +19,8 @@ public class o3_LengthOfLongestSubstring {
             return 0;
         HashMap<Character, Integer> map = new HashMap<>();
         int max = 0;
-        for(int i = 0, head = 0; i < s.length(); i++){
+        int head = 0;
+        for(int i = 0; i < s.length(); i++){
             if(map.containsKey(s.charAt(i))){
                 head = Math.max(head, map.get(s.charAt(i)) + 1);
             }
