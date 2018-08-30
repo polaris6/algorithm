@@ -21,8 +21,8 @@ public class o32_PrintFromTopToBottom {
             index++;
         }
         ArrayList<Integer> list1 = new ArrayList<>();
-        for(TreeNode tn : list)
-            list1.add(tn.val);
+        for(TreeNode node : list)
+            list1.add(node.val);
         return list1;
     }
 }

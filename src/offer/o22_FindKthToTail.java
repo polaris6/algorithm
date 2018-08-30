@@ -18,15 +18,15 @@ public class o22_FindKthToTail {
     public ListNode FindKthToTail(ListNode head,int k) {
         if(head == null || k <= 0)
             return null;
-        ListNode firstIndex = head, secondIndex = head;
+        ListNode first = head, second = head;
         int index = 1;
-        while(firstIndex.next != null){
-            firstIndex = firstIndex.next;
+        while(first.next != null){
+            first = first.next;
             index++;
             if(index > k){
-                secondIndex = secondIndex.next;
+                second = second.next;
             }
         }
-        return index < k ? null : secondIndex;
+        return index < k ? null : second;
     }
 }
