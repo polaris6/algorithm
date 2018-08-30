@@ -15,17 +15,17 @@ public class Traversal_UnRecur {
      * 3、不断重复步骤2，直到stack为空。
      */
     public void preOrderUnRecur(Node root){
-        if(root != null){
-            Stack<Node> stack = new Stack<>();
-            stack.push(root);
-            while(!stack.empty()){
-                root = stack.pop();
-                System.out.print(root.value + " ");
-                if(root.right != null)
-                    stack.push(root.right);
-                if(root.left != null)
-                    stack.push(root.left);
-            }
+        if(root != null)
+            return;
+        Stack<Node> stack = new Stack<>();
+        stack.push(root);
+        while(!stack.empty()){
+            root = stack.pop();
+            System.out.print(root.value + " ");
+            if(root.right != null)
+                stack.push(root.right);
+            if(root.left != null)
+                stack.push(root.left);
         }
     }
 
@@ -38,17 +38,17 @@ public class Traversal_UnRecur {
      * 4、不断重复直至stack为空
      */
     public void inOrderUnRecur(Node root){
-        if(root != null){
-            Stack<Node> stack = new Stack<>();
-            while(!stack.empty() || root != null){
-                if(root != null){
-                    stack.push(root);
-                    root = root.left;
-                }else {
-                    root = stack.pop();
-                    System.out.print(root.value + " ");
-                    root = root.right;
-                }
+        if(root != null)
+            return;
+        Stack<Node> stack = new Stack<>();
+        while(!stack.empty() || root != null){
+            if(root != null){
+                stack.push(root);
+                root = root.left;
+            }else {
+                root = stack.pop();
+                System.out.print(root.value + " ");
+                root = root.right;
             }
         }
     }
@@ -65,20 +65,21 @@ public class Traversal_UnRecur {
      * 顺序就是后序遍历的顺序。
      */
     public void postOrderUnRecur(Node root){
-        if(root != null){
-            Stack<Node> s1 = new Stack<>();
-            Stack<Node> s2 = new Stack<>();
-            s1.push(root);
-            while(!s1.empty()){
-                root = s1.pop();
-                s2.push(root);
-                if(root.left != null)
-                    s1.push(root.left);
-                if(root.right != null)
-                    s1.push(root.right);
-            }
-            while(!s2.empty())
-                System.out.print(s2.pop().value + " ");
+        if(root == null)
+            return;
+        Stack<Node> s1 = new Stack<>();
+        Stack<Node> s2 = new Stack<>();
+        s1.push(root);
+        while(!s1.empty()){
+            root = s1.pop();
+            s2.push(root);
+            if(root.left != null)
+                s1.push(root.left);
+            if(root.right != null)
+                s1.push(root.right);
         }
+        while(!s2.empty())
+            System.out.print(s2.pop().value + " ");
+
     }
 }
