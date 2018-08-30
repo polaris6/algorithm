@@ -45,7 +45,7 @@ public class Traversal_UnRecur {
             if(root != null){
                 stack.push(root);
                 root = root.left;
-            }else {
+            }else{
                 root = stack.pop();
                 System.out.print(root.value + " ");
                 root = root.right;
@@ -80,6 +80,5 @@ public class Traversal_UnRecur {
         }
         while(!s2.empty())
             System.out.print(s2.pop().value + " ");
-
     }
 }
