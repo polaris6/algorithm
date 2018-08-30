@@ -18,13 +18,13 @@ public class o48_LongestSubstringWithoutDuplication {
         if(s == null || s.length() == 0)
             return 0;
         HashMap<Character, Integer> map = new HashMap<>();
-        int max=0;
-        for(int i=0, head=0; i<s.length(); ++i){
+        int max = 0;
+        for(int i = 0, head = 0; i < s.length(); i++){
             if(map.containsKey(s.charAt(i))){
-                head = Math.max(head,map.get(s.charAt(i))+1);
+                head = Math.max(head, map.get(s.charAt(i)) + 1);
             }
-            map.put(s.charAt(i),i);
-            max = Math.max(max,i-head+1);
+            map.put(s.charAt(i), i);
+            max = Math.max(max, i - head + 1);
         }
         return max;
     }
