@@ -19,8 +19,8 @@ package offer;
  * 同时走直到相遇，这个相遇的节点就是环的入口
  */
 public class o23_EntryNodeOfLoop {
-    public ListNode EntryNodeOfLoop(ListNode pHead) {
-        ListNode first = pHead, second = pHead;
+    public ListNode EntryNodeOfLoop(ListNode head) {
+        ListNode first = head, second = head;
         boolean flag = false;
         while(first.next != null){
             first = first.next.next;
@@ -32,7 +32,7 @@ public class o23_EntryNodeOfLoop {
         }
         if(!flag)
             return null;
-        first = pHead;
+        first = head;
         while(first != second){
             first = first.next;
             second = second.next;
