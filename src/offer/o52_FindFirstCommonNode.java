@@ -13,8 +13,8 @@ public class o52_FindFirstCommonNode {
         ListNode a = pHead1;
         ListNode b = pHead2;
         while(a != b){
-            a = a == null? pHead2 : a.next;
-            b = b == null? pHead1 : b.next;
+            a = a == null ? pHead2 : a.next;
+            b = b == null ? pHead1 : b.next;
         }
         return a;
     }
