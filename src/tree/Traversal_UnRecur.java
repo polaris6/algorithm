@@ -14,10 +14,10 @@ public class Traversal_UnRecur {
      * 左孩子（如果存在）压入stack中。
      * 3、不断重复步骤2，直到stack为空。
      */
-    public void preOrderUnRecur(Node root){
+    public void preOrderUnRecur(TreeNode root){
         if(root != null)
             return;
-        Stack<Node> stack = new Stack<>();
+        Stack<TreeNode> stack = new Stack<>();
         stack.push(root);
         while(!stack.empty()){
             root = stack.pop();
@@ -37,10 +37,10 @@ public class Traversal_UnRecur {
      * 3、从stack中弹出栈顶节点，打印这个节点的值，并且让root = root.right;
      * 4、不断重复直至stack为空
      */
-    public void inOrderUnRecur(Node root){
+    public void inOrderUnRecur(TreeNode root){
         if(root != null)
             return;
-        Stack<Node> stack = new Stack<>();
+        Stack<TreeNode> stack = new Stack<>();
         while(!stack.empty() || root != null){
             if(root != null){
                 stack.push(root);
@@ -64,11 +64,11 @@ public class Traversal_UnRecur {
      * 左右根的反过程是根右左，使用前序遍历根左右（左右位置互换）的方法将节点弹出压入到s2中，则从s2中弹出节点并打印的
      * 顺序就是后序遍历的顺序。
      */
-    public void postOrderUnRecur(Node root){
+    public void postOrderUnRecur(TreeNode root){
         if(root == null)
             return;
-        Stack<Node> s1 = new Stack<>();
-        Stack<Node> s2 = new Stack<>();
+        Stack<TreeNode> s1 = new Stack<>();
+        Stack<TreeNode> s2 = new Stack<>();
         s1.push(root);
         while(!s1.empty()){
             root = s1.pop();

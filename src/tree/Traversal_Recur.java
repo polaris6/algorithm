@@ -5,7 +5,7 @@ package tree;
  */
 public class Traversal_Recur {
     //前序递归遍历，根左右
-    public void preOrderRecur(Node root){
+    public void preOrderRecur(TreeNode root){
         if(root == null)
             return;         //return;用于void函数的返回，不返回任何值，但是可以在此处结束该函数
         System.out.print(root.value + " ");
@@ -14,7 +14,7 @@ public class Traversal_Recur {
     }
 
     //中序递归遍历，左根右
-    public void inOrderRecur(Node root){
+    public void inOrderRecur(TreeNode root){
         if(root == null)
             return;
         inOrderRecur(root.left);
@@ -23,7 +23,7 @@ public class Traversal_Recur {
     }
 
     //后序递归遍历，左右根
-    public void postOrderRecur(Node root){
+    public void postOrderRecur(TreeNode root){
         if(root == null)
             return;
         postOrderRecur(root.left);
